@@ -6,7 +6,7 @@
   Description: Fix <code>Missed Schedule</code> Future Posts Cron Job: find missed schedule posts that match this problem every 1 minute and it republish them correctly fixed 10 items per session.
   Author: BeAPI
   Author URI: http://www.beapi.fr
-  Version: 0.1
+  Version: 0.2
  */
 
 class BEA_Missed_Schedule {
@@ -54,5 +54,9 @@ class BEA_Missed_Schedule {
 	}
 }
 
-add_action( 'plugins_loaded', create_function( '', 'return new BEA_Missed_Schedule();' ) );
+add_action( 'plugins_loaded', 'register_bea_missed_schedule' );
+function register_bea_missed_schedule() {
+	new BEA_Missed_Schedule();
+}
+
 register_deactivation_hook( __FILE__, array( 'BEA_Missed_Schedule', 'deactivation' ) );
