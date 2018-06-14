@@ -4,8 +4,8 @@
   Plugin Name: BEA Missed Schedule
   Plugin URI: http://www.beapi.fr
   Description: Fix <code>Missed Schedule</code> Future Posts Cron Job: find missed schedule posts that match this problem every 1 minute and it republish them correctly fixed 10 items per session.
-  Author: BeAPI
-  Author URI: http://www.beapi.fr
+  Author: Be API
+  Author URI: https://beapi.fr
   Version: 0.2
  */
 
