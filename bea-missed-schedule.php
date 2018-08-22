@@ -14,7 +14,7 @@ class BEA_Missed_Schedule {
 	const option_name = 'bea_missed_schedule';
 
 	public function __construct() {
-		add_action( 'init', array( __CLASS__, 'init' ), 0 );
+		add_action( 'wp_loaded', array( __CLASS__, 'init' ), 0 );
 	}
 
 	public static function deactivation() {
