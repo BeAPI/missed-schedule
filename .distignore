@@ -10,11 +10,8 @@ tests
 .env.testing
 .gitignore
 .DS_Store
-codeception.dist.yml
 composer.json
 composer.lock
-docker-compose.yml
-docker-compose-pipelines.yml
 grumphp.yml
 LICENCE
 old-bitbucket-pipelines.yml
