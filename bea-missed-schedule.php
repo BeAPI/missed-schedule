@@ -12,7 +12,7 @@
 namespace BEAPI\MissedSchedule;
 
 // Standard plugin security, keep this line in place.
-defined( 'ABSPATH' ) or die();
+defined( 'ABSPATH' ) || die();
 
 // If WP-CRON run on server side, by default, no check missed schedule on front side, otherwise do it
 if ( ! defined( 'DISABLE_WP_CRON' ) || true !== DISABLE_WP_CRON ) {
@@ -32,7 +32,7 @@ if ( ! defined( 'DISABLE_WP_CRON' ) || true !== DISABLE_WP_CRON ) {
 function cron_schedules( $schedules ) {
 	$schedules['5-minutes'] = array(
 		'interval' => 5 * MINUTE_IN_SECONDS,
-		'display'  => __( 'Every 5 minutes', 'devhub' )
+		'display'  => 'Every 5 minutes',
 	);
 
 	return $schedules;
