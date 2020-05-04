@@ -1,12 +1,17 @@
 <?php
-
-/*
-  Plugin Name: BEA Missed Schedule
-  Plugin URI: http://www.beapi.fr
-  Description: Fix <code>Missed Schedule</code> Future Posts Cron Job: find missed schedule posts that match this problem every 1 minute and it republish them correctly fixed 10 items per session.
-  Author: Be API
-  Author URI: https://beapi.fr
-  Version: 0.2
+/**
+ * Plugin Name:       BEA Missed Schedule
+ * Plugin URI:        https://example.com/plugins/the-basics/
+ * Description:       Publish future post when publication date is pasted and WP fail. Prefer WP-CRON CLI usage instead synchronised exec
+ * Version:           1.0
+ * Requires at least: 4.6
+ * Requires PHP:      5.6
+ * Author:            Be API
+ * Author URI:        https://beapi.fr
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:
+ * Domain Path:
  */
 
 namespace BEAPI\MissedSchedule;
@@ -40,10 +45,16 @@ function cron_schedules( $schedules ) {
 
 add_filter( 'cron_schedules', __NAMESPACE__ . '\\cron_schedules' );
 
+/**
+ * Check constant before allow sync missed check
+ */
 if ( defined( 'ENABLE_SYNC_MISSED_CHECK' ) && true === ENABLE_SYNC_MISSED_CHECK ) {
 	add_action( 'wp_loaded', __NAMESPACE__ . '\\publish_missed_schedule' );
 }
 
+/**
+ * Get future posts with an publication date pasted, and publish it !
+ */
 function publish_missed_schedule() {
 	global $wpdb;
 
@@ -68,6 +79,9 @@ function publish_missed_schedule() {
 	}
 }
 
+/**
+ * Register also action for WP-CRON
+ */
 add_action( 'bea_missed_scheduled_event', __NAMESPACE__ . '\\publish_missed_schedule' );
 
 if ( ! wp_next_scheduled( __NAMESPACE__ . '\\bea_missed_scheduled_event' ) ) {
