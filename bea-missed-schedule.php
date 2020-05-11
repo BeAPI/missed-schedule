@@ -84,6 +84,6 @@ function publish_missed_schedule() {
  */
 add_action( 'bea_missed_scheduled_event', __NAMESPACE__ . '\\publish_missed_schedule' );
 
-if ( ! wp_next_scheduled( __NAMESPACE__ . '\\bea_missed_scheduled_event' ) ) {
-	wp_schedule_event( time(), '5-minutes', __NAMESPACE__ . '\\bea_missed_scheduled_event' );
+if ( ! wp_next_scheduled( 'bea_missed_scheduled_event' ) ) {
+	wp_schedule_event( time(), '5-minutes', 'bea_missed_scheduled_event' );
 }
