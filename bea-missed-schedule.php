@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       BEA Missed Schedule
- * Plugin URI:        https://example.com/plugins/the-basics/
+ * Plugin Name:       BE API - Missed Schedule
+ * Plugin URI:        https://github.com/BeAPI/bea-missed-schedule
  * Description:       Publish future post when publication date is pasted and WP fail. Prefer WP-CRON CLI usage instead synchronised exec
  * Version:           1.0
  * Requires at least: 4.6
@@ -60,7 +60,7 @@ function publish_missed_schedule() {
 
 	$missed_posts = $wpdb->get_col(
 		$wpdb->prepare(
-			"SELECT ID FROM {$wpdb->posts} WHERE post_status = 'future' AND post_date <= %s LIMIT 100",
+			"SELECT ID FROM {$wpdb->posts} WHERE post_status = 'future' AND post_date <= %s ORDER BY post_date ASC LIMIT 10",
 			current_time( 'mysql', false )
 		)
 	);
@@ -82,8 +82,8 @@ function publish_missed_schedule() {
 /**
  * Register also action for WP-CRON
  */
-add_action( 'bea_missed_scheduled_event', __NAMESPACE__ . '\\publish_missed_schedule' );
+add_action( 'beapi_missed_scheduled_event', __NAMESPACE__ . '\\publish_missed_schedule' );
 
-if ( ! wp_next_scheduled( 'bea_missed_scheduled_event' ) ) {
-	wp_schedule_event( time(), '5-minutes', 'bea_missed_scheduled_event' );
+if ( ! wp_next_scheduled( 'beapi_missed_scheduled_event' ) ) {
+	wp_schedule_event( time(), '5-minutes', 'beapi_missed_scheduled_event' );
 }
