@@ -1,5 +1,5 @@
 {
-  "name": "bea/missed-schedule",
+  "name": "beapi/missed-schedule",
   "description": "Fix Missed Schedule Future Posts",
   "minimum-stability": "stable",
   "license": "GPL-2.0",
