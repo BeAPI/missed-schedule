@@ -2,9 +2,9 @@
 /**
  * Plugin Name:       Be API - Missed Schedule
  * Plugin URI:        https://github.com/BeAPI/beapi-missed-schedule
- * Description:       Publish future post when publication date is pasted and WP fail. Prefer WP-CRON CLI usage instead synchronised exec
- * Version:           1.0
- * Requires at least: 4.6
+ * Description:       Publish future post when publication date is pasted and WP fail. Prefer WP-CRON CLI usage instead synchronous exec
+ * Version:           1.0.0
+ * Requires at least: 3.9
  * Requires PHP:      5.6
  * Author:            Be API
  * Author URI:        https://beapi.fr
@@ -54,6 +54,8 @@ if ( defined( 'ENABLE_SYNC_MISSED_CHECK' ) && true === ENABLE_SYNC_MISSED_CHECK 
 
 /**
  * Get future posts with an publication date pasted, and publish it !
+ *
+ * @return void
  */
 function publish_missed_schedule() {
 	global $wpdb;
