@@ -2,7 +2,7 @@
 
 # Missed Schedule 
 
-Publish future post when publication date is pasted and WP fail. Prefer WP-CRON CLI usage instead synchronous execution.
+Publish future post when the publication date has passed and WordPress fails. Prefer WP-CRON CLI usage instead synchronous execution.
 
 ## Requirements
 
