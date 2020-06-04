@@ -11,9 +11,9 @@ Publish future post when publication date is pasted and WP fail. Prefer WP-CRON 
 
 ## Customization and hooks
 
-This plugin does not have a hook.
+This plugin doesn't have any hook.
 
-It is possible to force the publication synchronously with the following constant. Otherwise, the articles will be published via the WP_CRON tasks.
+It is possible to force the publication synchronously mode with the following constant. Otherwise, posts will be published via the WP_CRON tasks.
 
 ```
 <?php 
