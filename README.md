@@ -6,7 +6,7 @@ Publish future post when publication date is pasted and WP fail. Prefer WP-CRON 
 
 ## Requirements
 
-* WordPress > 4.4
+* WordPress > 3.9
 * PHP > 5.6
 
 ## Customization and hooks
