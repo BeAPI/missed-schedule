@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Missed Schedule
- * Plugin URI:        httpsPublish future post when the publication date has passed and WordPress fails.://github.com/BeAPI/missed-schedule
- * Description:
+ * Plugin URI:        https://github.com/BeAPI/missed-schedule
+ * Description:       Publish future post when the publication date has passed and WordPress fails.
  * Version:           1.0.1
  * Requires at least: 3.9
  * Requires PHP:      5.6
