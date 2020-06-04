@@ -1,6 +1,6 @@
 {
   "name": "beapi/missed-schedule",
-  "description": "Fix Missed Schedule Future Posts",
+  "description": "Publish future post when the publication date has passed and WordPress fails.",
   "minimum-stability": "stable",
   "license": "GPL-2.0-or-later",
   "authors": [
