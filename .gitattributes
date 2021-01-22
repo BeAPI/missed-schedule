@@ -1,0 +1,11 @@
+.git export-ignore
+.gitignore export-ignore
+.github export-ignore
+.distignore export-ignore
+composer.json export-ignore
+composer.lock export-ignore
+grumphp.yml export-ignore
+phpcs.xml export-ignore
+psalm.xml export-ignore
+
+composer.lock -diff
