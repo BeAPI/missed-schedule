@@ -24,7 +24,7 @@ if ( ! defined( 'ENABLE_SYNC_MISSED_CHECK' ) ) {
 
 # Who ?
 
-Created by [Be API](https://beapi.fr), the French WordPress leader agency since 2009. Based in Paris, we are more than 30 people and always [hiring](https://beapi.workable.com) some fun and talented guys. So we will be pleased to work with you.
+Created by [Be API](https://beapi.fr), the French WordPress leader agency since 2009. Based in Paris, we are more than 30 people and always hiring some fun and talented guys. So we will be pleased to work with you.
 
 This plugin is only maintained, which means we do not guarantee some free support. Consider reporting an [issue](#issues--features-request--proposal) and be patient.
 
