@@ -14,11 +14,8 @@ tests
 composer.json
 composer.lock
 grumphp.yml
-LICENCE
-old-bitbucket-pipelines.yml
 package.json
 package-lock.json
 phpcs.xml
-psalm.xml
 README.md
 webpack.config.js
