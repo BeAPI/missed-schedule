@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="ContentSyncFusion">
+<ruleset name="MissedSchedule">
     <description>Coding Standards for plugin</description>
 
     <!-- Scan all files in directory -->
@@ -40,15 +40,17 @@
         <!-- Exclude as we use the short array syntax over the long one. -->
         <exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
     </rule>
-    <config name="minimum_supported_wp_version" value="3.9"/>
+    <config name="minimum_supported_wp_version" value="4.9"/>
 
     <rule ref="PHPCompatibility"/>
-    <config name="testVersion" value="5.6-"/>
+    <config name="testVersion" value="7.4-"/>
 
     <rule ref="WordPress.WP.I18n">
         <properties>
             <!-- Value: replace the text domain used. -->
-            <property name="text_domain" type="array" value="beapi-missed-schedule"/>
+            <property name="text_domain" type="array">
+                <element value="beapi-missed-schedule"/>
+            </property>
         </properties>
     </rule>
     <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
