@@ -32,7 +32,6 @@
   },
   "scripts": {
     "cbf": "./vendor/bin/phpcbf",
-    "cs": "./vendor/bin/phpcs",
-    "psalm": "./vendor/bin/psalm"
+    "cs": "./vendor/bin/phpcs"
   }
 }
